@@ -1,0 +1,26 @@
+import plagas.*
+
+describe "Test de plagas" {
+    const plagaDeCucarachas1 = new PlagaDeCucarachas(poblacion = 10, pesoPromedio = 8)
+    const plagaDePulgas1 = new PlagaDePulgas(poblacion = 10)
+    const plagaDeGarrapatas1 = new PlagaDeGarrapatas(poblacion = 10)
+    const plagaDeMosquitos1 = new PlagaDeMosquitos(poblacion = 10)
+
+
+    test "El nivel de daño de la plaga de cucarachas 1 es 5" {
+        assert.equals(5, plagaDeCucarachas1.nivelDeDaño())
+    }
+
+    test "El nivel de daño de la plaga de pulgas 1 es 20" {
+        assert.equals(20, plagaDePulgas1.nivelDeDaño())
+    }
+
+    test "El nivel de daño de la plaga de garrapatas 1 es 20" {
+        assert.equals(20, plagaDeGarrapatas1.nivelDeDaño())
+    }
+
+    test "El nivel de daño de la plaga de mosquitos 1 es 10" {
+        assert.equals(10, plagaDeMosquitos1.nivelDeDaño())
+    }
+
+}
