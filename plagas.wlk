@@ -3,8 +3,7 @@ class Plaga {
 
     method transmiteEnfermedades() = poblacion >= 10
 
-    method atacarA(unElemento) {
-        unElemento.recibirAtaqueDe(self)
+    method atacar() {
         poblacion += poblacion * 0.1
     }
 }
@@ -20,9 +19,8 @@ class PlagaDeCucarachas inherits Plaga {
 
     method pesoPromedio() = pesoPromedio
 
-    override method atacarA(unElemento) {
-        unElemento.recibirAtaqueDe(self)
-        poblacion += poblacion * 0.1
+    override method atacar() {
+        super()
         pesoPromedio += 2
     }
 }
@@ -32,8 +30,7 @@ class PlagaDePulgas inherits Plaga {
 }   
 
 class PlagaDeGarrapatas inherits PlagaDePulgas {
-    override method atacarA(unElemento) {
-        unElemento.recibirAtaqueDe(self)
+    override method atacar() {
         poblacion += poblacion + (poblacion * 0.2)
     }
 }

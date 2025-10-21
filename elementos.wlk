@@ -7,6 +7,7 @@ class Hogar {
 
     method recibirAtaqueDe(unaPlaga) {
         nivelDeMugre += unaPlaga.nivelDeDaño()
+        unaPlaga.atacar()
     }
 }
 
@@ -27,7 +28,7 @@ class Huerta {
         } else {
             capacidadDeProduccion -= (unaPlaga.nivelDeDaño() * 0.1).max(0)
         }
-        
+        unaPlaga.atacar()
     }
 }
 
@@ -40,6 +41,7 @@ class Mascota {
         if(unaPlaga.transmiteEnfermedades()) {
             nivelDeSalud -= unaPlaga.nivelDeDaño()
         }
+        unaPlaga.atacar()
     }
 }
 
